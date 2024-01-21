@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($username) && !empty($password)) {
 $filePath = "/var/www/temp.json";
 
-$password = filter_var($password, FILTER_SANITIZE_STRING);
 $username = filter_var($username, FILTER_SANITIZE_STRING);
+$password = filter_var($password, FILTER_SANITIZE_STRING);
 
-$hta_password = crypt($password, base64_encode($password));
+$htpassword = crypt($password, base64_encode($password));
 
 if (file_exists($filePath)) {
     $jsonData = file_get_contents($filePath);
@@ -31,7 +31,7 @@ $credentials[$username] = array(
         "password" => $encrypted_password,
         "salt" => $salt,
         "email" => $email,
-        "htaPassword" => $hta_password,
+        "htPassword" => $htpassword,
         "privileges" => "default",
 	"registrationTime" => $registrationTime
 );

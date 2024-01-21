@@ -12,6 +12,9 @@ This is the temporary landing page for RadioFuture.com. More is sure to come soo
 <a href="http://futureradio.net/data/register.php">
 <button>Signup for Livestream</button>
 </a>
+<a href="http://futureradio.net/data/login.php">
+<button>Admin Login</button>
+</a>
 <?php include( 'templates/bottominfo.php' ); ?>
 </body>
 </html>
