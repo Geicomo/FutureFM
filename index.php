@@ -8,7 +8,10 @@
 <body>
 <a style="font-size:18px">Welcome To RadioFuture.com</a><br><br>
 This is the temporary landing page for RadioFuture.com. More is sure to come soon, once the main computer is running.<br> Enjoy whats here though!
-
+<br><br>
+<a href="http://futureradio.net/data/register.php">
+<button>Signup for Livestream</button>
+</a>
 <?php include( 'templates/bottominfo.php' ); ?>
 </body>
 </html>
