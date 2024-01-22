@@ -10,7 +10,7 @@
     <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
 <br><a style="font-size:12px;">You must signup to listen</a>
 </div>
-    <a>All content is owned by <a href="https://geicomo.com/geicomoterms.pdf">Geicomo.com</a>. All rights reserved. </a>
+    <a>Some content is owned by <a href="https://geicomo.com/geicomoterms.pdf">Geicomo.com</a>. All rights reserved. </a>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {

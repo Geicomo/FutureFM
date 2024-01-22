@@ -15,9 +15,9 @@
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Register">
-
     </form>
-<a style="font-weight:18px;"><i>Your account must be approved by a admin <br>before having access to FutureFM livestream.</i></a>
+<a style="font-weight:18px;"><i>Your account must be approved by a admin <br>before having access to FutureFM livestream.</i></a><br><br>
+<a style="font-size:12px;">By signing up you are agreeing to the <a style="font-size:11px;" href="https://geicomo.com/geicomoterms.pdf">Terms & Service</a><a style="font-size:12px;"> of futureradio.net</a>
 <?php include( '/var/www/html/templates/bottominfo.php' ); ?>
 </body>
 </html>
