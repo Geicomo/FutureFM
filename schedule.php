@@ -1,7 +1,7 @@
 <html>
 <head>
-	<title>FutureRadio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+	<title>FutureRadio | 97.3FM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.7">
         <link rel="stylesheet" type="text/css" href="http://futureradio.net/templates/main.css">
 <?php include( 'templates/header.php' ); ?>
 </head>
