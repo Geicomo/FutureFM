@@ -1,14 +1,13 @@
 <div style="position:fixed;bottom:0">
 <div id="audioPlayer" class="custom-audio-player">
 <a style="float:left;font-weight:bold;font-size:14px;">Livestream Output:</a><br>
-    <audio id="audioElement" autoplay>
+    <audio id="audioElement" preload="none">
         <source src="http://160.2.162.241/stream" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <button id="playPauseBtn">Play</button>
 <button id="muteBtn">Mute</button>
-    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
-<br><a style="font-size:12px;">You must signup to listen</a>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.3">
 </div>
     <a>Some content is owned by <a href="https://geicomo.com/geicomoterms.pdf">Geicomo.com</a>. All rights reserved. </a>
 </div>

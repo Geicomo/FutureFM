@@ -7,17 +7,19 @@
 </head>
 <body>
 	<a style="font-size:18px">Future Radio 97.3FM</a><br><br>
+<div id="info">
 	<a>Below is the livestream of Future Radio 97.3.</a><br>
 	<a style="font-size:13px"><i>Radio is delayed by about 5 seconds.</i></a><br><br>
+</div>
 	<a style="font-weight:bold;">Live Stream Output:</a><br>
 <div style="margin-left:0px;"id="audioPlayer" class="custom-audio-player">
     <audio id="audioElement" autoplay>
         <source src="http://160.2.162.241/stream" type="audio/mpeg">
-        Your browser does not support the audio element.
+        <a id="error">Your browser does not support the audio element.</a>
     </audio>
     <button id="playPauseBtn">Play</button>
 <button id="muteBtn">Mute</button>
-    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.3">
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {

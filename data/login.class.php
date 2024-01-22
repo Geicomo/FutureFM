@@ -28,18 +28,19 @@ class LoginUser {
             // Hash the provided password with the stored salt
             $hashed_password = hash('sha256', $this->password . $stored_salt);
 
-	    if ($privileges === "admin") {
+	    if ($privileges === "admin" || $privileges === "owner") {
 	    if ($hashed_password === $stored_password) {
-                // Save the updated user data back to the file
                 file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT));
 
                 session_start();
                 $_SESSION['username'] = $this->username;
 		$_SESSION['authorized'] = true;
-		header( 'location: /admin/validate.php' );
-	    }
-    		}	    
-           }
+		header( 'location: /admin/home.php' );
+	    	}
+	    	} else {	
+        		return $this->error = "You are not authorized to login";
+		}	    
+      	}
         return $this->error = "Wrong username or password";
 	}
 }

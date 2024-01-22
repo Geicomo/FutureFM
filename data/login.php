@@ -13,14 +13,6 @@ if(isset($_POST['submit'])){
         <link rel="stylesheet" type="text/css" href="http://futureradio.net/templates/main.css">
 <?php include( '/var/www/html/templates/header.php' ); ?>
 </head>
-<style>
-	.error {	
-		color: red;
-	}
-	.success {
-		color: green;
-	}
-</style>
 <body>
 <a style="font-size:18px">Admin Login Panel</a><br><br>
 

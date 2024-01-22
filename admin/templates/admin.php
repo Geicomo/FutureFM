@@ -28,10 +28,11 @@ if (!isset($userData[$username])) {
 // Extract the user's privileges
 $userPrivileges = $userData[$username]['privileges'];
 
-if($userPrivileges != "admin") {
-        header('Location: error.php');
-        exit;
-} else {
+if ($userPrivileges === "admin" || $userPrivileges === "owner") {
 
-}
+	} else {
+		header('Location: error.php');
+        	exit;
+
+	}
 ?>
