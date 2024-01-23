@@ -38,6 +38,8 @@
         </style>
 </head>
 <body>
+<a style="font-size:18px;">Admin Home</a><br><br>
+Welcome to the Admin panel
     <?php
     if ($username === 'Future') {
         echo '<a style="font-size:18px;">Post to the Blog</a><br><br>';
@@ -65,7 +67,7 @@
             echo '<p>No blog posts available.</p>';
         }
     ?>
-
+<a style="font-size:12px;font-style:italic;">Only the owner can post to the blog</a>
 <script>
         document.addEventListener('DOMContentLoaded', function () {
             const submitButton = document.getElementById('submit_blog');

@@ -20,6 +20,6 @@
 </div>
 
 <div id="header">
-	<a style="font-weight:bold;font-size:32px;">User Information</a>
+	<a style="font-weight:bold;font-size:32px;">Admin Panel</a>
 </div>
 <div id="content">

@@ -8,7 +8,7 @@
 <body>
 <a style="font-size:18px">Welcome To FutureFM</a><br><br>
 <div id="info">
-Welcome to the landing page of FutureFM where we play the past, present and <strong>future.</strong> <br>In order to listen to the livestream through the website you will have to create a account with the Signup button below. Enjoy whats here!
+Welcome to the landing page of FutureFM where we play the past, present and <strong>future.</strong> <br>In order to listen to the livestream through the website you will have to create a account with the signup button below. Enjoy whats here!
 </div>
 <br>
 <a href="http://futureradio.net/data/register.php">

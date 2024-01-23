@@ -8,6 +8,7 @@
     <button id="playPauseBtn">Play</button>
 <button id="muteBtn">Mute</button>
     <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.3">
+<div style="text-align:left;">Login to see the song...</div>
 </div>
     <a>Some content is owned by <a href="https://geicomo.com/geicomoterms.pdf">Geicomo.com</a>. All rights reserved. </a>
 </div>

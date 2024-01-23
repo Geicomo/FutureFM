@@ -22,6 +22,17 @@ if (isset($_POST['userId'])) {
     $dataJson[$userId] = $userData;
     file_put_contents($dataJsonPath, json_encode($dataJson, JSON_PRETTY_PRINT));
 
+    // Update .htpasswd file
+    $htpasswdPath = '/var/www/html/stream/.htpasswd';
+    $htpasswdData = file_exists($htpasswdPath) ? file_get_contents($htpasswdPath) : '';
+    
+    // Assuming 'username' and 'HTpassword' are keys in the user data
+    $htpassword = $userData['HTpassword'];
+
+    // Append new user credentials
+    $htpasswdData .= "$userId:$htpassword\n";
+    file_put_contents($htpasswdPath, $htpasswdData);
+
     echo 'User processed';
 }
 ?>

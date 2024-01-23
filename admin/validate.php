@@ -43,7 +43,7 @@ if (is_null($userData)) {
 	<?php foreach ($userData as $userId => $userDetails): ?>
         <div id="user-<?php echo $userId; ?>">
             <strong>Username: </strong><?php echo $userId; ?><br>
-            <strong>HTpassword: </strong><?php echo $userDetails['htPassword']; ?><br>
+            <strong>HTpassword: </strong><?php echo $userDetails['HTpassword']; ?><br>
             <strong>Email: </strong><?php echo $userDetails['email']; ?><br>
             <strong>Registration-Time: </strong><?php echo $userDetails['registrationTime']; ?><br>
             <div class="green-box" onclick="allowUser('<?php echo $userId; ?>')"></div>
@@ -56,7 +56,7 @@ if (is_null($userData)) {
 	<?php foreach ($userData2 as $userId => $userDetails): ?>
         <div id="user-<?php echo $userId; ?>">
             <strong>Username: </strong><?php echo $userId; ?><br>
-            <strong>HTpassword: </strong><?php echo $userDetails['htPassword']; ?><br>
+            <strong>HTpassword: </strong><?php echo $userDetails['HTpassword']; ?><br>
             <strong>Email: </strong><?php echo $userDetails['email']; ?><br>
             <strong>Registration-Time: </strong><?php echo $userDetails['registrationTime']; ?><br>
             <br><br>
@@ -86,7 +86,5 @@ if (is_null($userData)) {
         }
 
     </script>
-<br><br>
-<a style="font-size:16px;"><i><strong>.htapasswd</strong> accounts must be like "test:dGRkPurkuWmW2" on a new line...</i></a>
 </body>
 </html>

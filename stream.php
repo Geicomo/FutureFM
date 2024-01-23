@@ -10,7 +10,7 @@
 <div id="info">
 	<a>Below is the livestream of Future Radio 97.3.</a><br>
 	<a style="font-size:13px"><i>Radio is delayed by about 5 seconds.</i></a><br><br>
-</div>
+</div><br>
 	<a style="font-weight:bold;">Live Stream Output:</a><br>
 <div style="margin-left:0px;"id="audioPlayer" class="custom-audio-player">
     <audio id="audioElement" autoplay>
@@ -20,7 +20,10 @@
     <button id="playPauseBtn">Play</button>
 <button id="muteBtn">Mute</button>
     <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.3">
+
+    <div style="text-align:left;" id="currentSong">Loading...</div>
 </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('audioElement');
@@ -62,6 +65,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+        // Function to fetch and display the current song
+        function fetchCurrentSong() {
+            fetch('http://futureradio.net/data/current_song.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.current_song) {
+                        document.getElementById('currentSong').textContent = data.current_song;
+                    } else {
+                        document.getElementById('currentSong').textContent = 'No song is currently playing.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('currentSong').textContent = 'Error fetching song.';
+                });
+        }
+
+        // Fetch the current song every 5 seconds
+        setInterval(fetchCurrentSong, 5000);
+
+        // Fetch the current song when the page loads
+        document.addEventListener('DOMContentLoaded', fetchCurrentSong);
 
 </script>
 <div style="position:fixed;bottom:0">
