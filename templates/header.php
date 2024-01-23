@@ -11,7 +11,6 @@
                 break;
         default:	
                 echo '<img id="logo" src="http://futureradio.net/images/radiofuture.png"></img>';
-                break;
         }
 ?>
 	<p><a href="http://futureradio.net/index.php">Home</a></p>

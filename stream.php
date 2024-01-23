@@ -20,76 +20,23 @@
     <button id="playPauseBtn">Play</button>
 <button id="muteBtn">Mute</button>
     <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.3">
-
-    <div style="text-align:left;" id="currentSong">Loading...</div>
+    <div id="currentSong">Loading current song...</div>
+    <div id="elapsedTime"></div>
+    <div id="songProgressContainer" style="width: 100%; background-color: #ddd;">
+        <div id="songProgressBar" style="height: 5px; width: 0%; background-color: #4CAF50;"></div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.getElementById('audioElement');
-    var playPauseBtn = document.getElementById('playPauseBtn');
-    var progressBar = document.getElementById('progressBar');
-    var currentTimeElem = document.getElementById('currentTime');
-    var durationTimeElem = document.getElementById('durationTime');
+<?php
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="Restricted Area"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo 'Authentication required';
+    exit;
+} else {
+include( '/var/www/html/stream/stream.php' ); 
+}
+?>
 
-    var muteBtn = document.getElementById('muteBtn');
-    var volumeSlider = document.getElementById('volumeSlider');
-
-    // Mute and unmute audio
-    muteBtn.addEventListener('click', function() {
-        if (audio.muted) {
-            audio.muted = false;
-            muteBtn.textContent = 'Mute';
-            volumeSlider.value = audio.volume;
-        } else {
-            audio.muted = true;
-            muteBtn.textContent = 'Unmute';
-            volumeSlider.value = 0;
-        }
-    });
-
-    // Update the audio volume
-    volumeSlider.addEventListener('input', function() {
-        audio.volume = this.value;
-        muteBtn.textContent = audio.volume > 0 ? 'Mute' : 'Unmute';
-    });
-
-    // Play or pause the audio
-    playPauseBtn.addEventListener('click', function() {
-        if (audio.paused) {
-            audio.play();
-            playPauseBtn.textContent = 'Pause';
-        } else {
-            audio.pause();
-            playPauseBtn.textContent = 'Play';
-        }
-    });
-});
-
-        // Function to fetch and display the current song
-        function fetchCurrentSong() {
-            fetch('http://futureradio.net/data/current_song.php')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.current_song) {
-                        document.getElementById('currentSong').textContent = data.current_song;
-                    } else {
-                        document.getElementById('currentSong').textContent = 'No song is currently playing.';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    document.getElementById('currentSong').textContent = 'Error fetching song.';
-                });
-        }
-
-        // Fetch the current song every 5 seconds
-        setInterval(fetchCurrentSong, 5000);
-
-        // Fetch the current song when the page loads
-        document.addEventListener('DOMContentLoaded', fetchCurrentSong);
-
-</script>
 <div style="position:fixed;bottom:0">
     <a>All content is owned by <a href="https://geicomo.com/geicomoterms.pdf">Geicomo.com</a>. All rights reserved. </a>
 </div>
