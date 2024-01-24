@@ -15,20 +15,20 @@
 <body>
 <a style="font-size:18px">Scheduling</a><br>
 <br>
-<div class="schedule">
-<p>Monday - None</p>
+<div id="info">
+<p>Monday - Mogging Monday</p>
 <hr>
-<p>Tuesday - None</p>
+<p>Tuesday - Trap Tuesday</p>
 <hr>
-<p>Wednesday - None</p>
+<p>Wednesday - Wasteland Wednesday</p>
 <hr>
-<p>Thursday - None</p>
+<p>Thursday - Throwback Thursday</p>
 <hr>
 <p>Friday - <a>Future Fridays!</a></p>
 <hr>
-<p>Saturday - None</p>
+<p>Saturday - Stoner Saturday</p>
 <hr>
-<p>Sunday - None</p>
+<p>Sunday - Lords Day</p>
 </div>
 
 <?php include( 'templates/bottominfo.php' ); ?>

@@ -8,9 +8,13 @@
         {
         case 1:
                 echo '<img width="135" height="60" src="http://futureradio.net/images/futureratheon.png"></img>';
-                break;
-        default:	
-                echo '<img id="logo" src="http://futureradio.net/images/radiofuture.png"></img>';
+		break;
+	case 2:
+                echo '<img width="65" height="85" src="http://futureradio.net/images/futuredebian.png"></img>';
+		break;
+        default:		
+		echo '<img id="logo" src="http://futureradio.net/images/radiofuture.png"></img>';
+		break;
         }
 ?>
 	<p><a href="http://futureradio.net/index.php">Home</a></p>
