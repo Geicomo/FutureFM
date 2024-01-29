@@ -8,7 +8,7 @@
 <head>
 	<title>FutureRadio | 97.3FM</title>
 	<meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="http://futureradio.net/templates/main.css">
+        <link rel="stylesheet" type="text/css" href="https://futureradio.net/templates/main.css">
 <?php include( '/var/www/html/templates/header.php' ); ?>
 </head>
 <body>
@@ -20,8 +20,9 @@
                 <label>Email</label><br>
                 <input type="email" name="email"><br>
             	<label>Password</label><br>
-            	<input type="password" name="password"><br><br> 
-		<a href="http://futureradio.net/index.php"><button type="button">Back</button></a>
+		<input type="password" name="password"><br><br>
+		<a style="font-size:14px;"href="https://futureradio.net/data/frgpasswd/frgpasswd.php">Forgot Password...</a><br>
+		<a href="https://futureradio.net/index.php"><button type="button">Back</button></a>
 		<button type="submit" name="submit">Register</button>
 		<p class="success"><?php echo @$user->success ?></p>
         	<p class="error"><?php echo @$user->error ?></p>
@@ -36,7 +37,7 @@
     if (successMessage) {
         // If there's a success message, wait for 2 seconds and then redirect
         setTimeout(function() {
-            window.location.href = "http://futureradio.net/index.php";
+            window.location.href = "https://futureradio.net/index.php";
         }, 2000);
     }
 </script>

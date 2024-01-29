@@ -2,7 +2,7 @@
 <head>
 	<title>FutureRadio | 97.3FM</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="http://futureradio.net/templates/main.css">
+        <link rel="stylesheet" type="text/css" href="https://futureradio.net/templates/main.css">
 <?php include( 'templates/header.php' ); ?>
 </head>
 <body>
@@ -11,10 +11,10 @@
 Welcome to the landing page of FutureFM where we play the past, present and <strong>future.</strong> <br>In order to listen to the livestream through the website you will have to create a account with the signup button below. Enjoy whats here!
 </div>
 <br>
-<a href="http://futureradio.net/data/register.php">
+<a href="https://futureradio.net/data/register.php">
 <button>Signup for Livestream</button>
 </a><br><br>
-<div id="info">
+<div style="max-height:55vh;overflow-y:scroll;" id="info">
 <?php	
 echo '<h2>Blog Posts</h2>';
         $blogFilePath = '/var/www/html/blog/blogs.txt';
@@ -35,6 +35,7 @@ echo '<h2>Blog Posts</h2>';
         }
     ?>
 </div>
+<?php include( 'templates/slideshow.php' ); ?>
 <?php include( 'templates/bottominfo.php' ); ?>
 </body>
 </html>

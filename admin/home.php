@@ -2,8 +2,7 @@
 <head>
 	<title>FutureRadio | 97.3FM</title>    
 	<meta name="viewport" content="width=device-width, initial-scale=0.7">
-    	<link rel="stylesheet" type="text/css" href="http://futureradio.net/templates/main.css">
-   	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="https://futureradio.net/templates/main.css">
     	<?php include('/var/www/html/admin/templates/header.php'); ?>
     	<?php include('/var/www/html/admin/templates/admin.php'); ?>
         <style>
@@ -85,7 +84,7 @@ Welcome to the Admin panel
                         location.reload();
                     }
                 };
-                xhr.open('POST', 'http://futureradio.net/blog/posttoblog.php', true);
+                xhr.open('POST', 'https://futureradio.net/blog/posttoblog.php', true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.send('blog_title=' + encodeURIComponent(title) + '&blog_content=' + encodeURIComponent(content));
             });

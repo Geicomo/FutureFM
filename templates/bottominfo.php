@@ -2,7 +2,7 @@
 <div id="audioPlayer" class="custom-audio-player">
 <a style="float:left;font-weight:bold;font-size:14px;">Livestream Output:</a><br>
     <audio id="audioElement" preload="none">
-        <source src="http://160.2.162.241/stream" type="audio/mpeg">
+        <source src="https://160.2.162.241/stream" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <button id="playPauseBtn">Play</button>

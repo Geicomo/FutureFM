@@ -2,9 +2,9 @@
 <head>
 	<title>FutureRadio | 97.3FM</title>    
 	<meta name="viewport" content="width=device-width, initial-scale=0.7">
-    	<link rel="stylesheet" type="text/css" href="http://futureradio.net/templates/main.css">
-   	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    	<?php include('/var/www/html/admin/templates/header.php'); ?>
+    	<link rel="stylesheet" type="text/css" href="https://futureradio.net/templates/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<?php include('/var/www/html/admin/templates/header.php'); ?>
     	<?php include('/var/www/html/admin/templates/admin.php'); ?>
 <style>
 	.green-box, .red-box {
@@ -65,7 +65,7 @@ if (is_null($userData)) {
     <script>
         function allowUser(userId) {
             $.ajax({
-	    url: 'http://futureradio.net/data/allow.php',
+	    url: 'https://futureradio.net/data/allow.php',
                 type: 'POST',
                 data: { 'userId': userId },
                 success: function(response) {
@@ -76,7 +76,7 @@ if (is_null($userData)) {
 	}
 	function denyUser(userId) {
             $.ajax({
-	    url: 'http://futureradio.net/data/deny.php',
+	    url: 'https://futureradio.net/data/deny.php',
                 type: 'POST',
                 data: { 'userId': userId },
                 success: function(response) {

@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 <head>
 	<title>FutureRadio | 97.3FM</title>
 	<meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="http://futureradio.net/templates/main.css">
+        <link rel="stylesheet" type="text/css" href="https://futureradio.net/templates/main.css">
 <?php include( '/var/www/html/templates/header.php' ); ?>
 </head>
 <body>

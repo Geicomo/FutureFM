@@ -1,0 +1,6 @@
+<Files stream.php>
+AuthName "Dialog prompt"
+AuthType Basic
+AuthUserFile /var/www/html/stream/.htpasswd
+Require valid-user
+</Files>

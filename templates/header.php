@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="main.css">
 <div id="sidebar">
 	<?php
                 //20 possible strings
@@ -7,19 +6,19 @@
                 switch ($val)
         {
         case 1:
-                echo '<img width="135" height="60" src="http://futureradio.net/images/futureratheon.png"></img>';
+                echo '<img width="135" height="60" src="https://futureradio.net/images/futureratheon.png"></img>';
 		break;
 	case 2:
-                echo '<img width="65" height="85" src="http://futureradio.net/images/futuredebian.png"></img>';
+                echo '<img width="65" height="85" src="https://futureradio.net/images/futuredebian.png"></img>';
 		break;
         default:		
-		echo '<img id="logo" src="http://futureradio.net/images/radiofuture.png"></img>';
+		echo '<img id="logo" src="https://futureradio.net/images/radiofuture.png"></img>';
 		break;
         }
 ?>
-	<p><a href="http://futureradio.net/index.php">Home</a></p>
-	<p><a href="http://futureradio.net/schedule.php">Schedule</a></p>
-	<p><a href="http://futureradio.net/stream.php">Livestream</a></p>
+	<p><a href="https://futureradio.net/index.php">Home</a></p>
+	<p><a href="https://futureradio.net/schedule.php">Schedule</a></p>
+	<p><a href="https://futureradio.net/stream.php">Livestream</a></p>
 </div>
 
 <div id="header">
