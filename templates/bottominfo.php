@@ -1,17 +1,18 @@
-<div style="position:fixed;bottom:0">
+<div style="margin-left:68px;position:fixed;bottom:5;">
 <div id="audioPlayer" class="custom-audio-player">
 <a style="float:left;font-weight:bold;font-size:14px;">Livestream Output:</a><br>
     <audio id="audioElement" preload="none">
-        <source src="https://160.2.162.241/stream" type="audio/mpeg">
+        <source src="https://futureradio.net/stream" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <button id="playPauseBtn">Play</button>
 <button id="muteBtn">Mute</button>
     <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.3">
-<div style="text-align:left;">Login to see the song...</div>
+<div style="text-align:left;">
+	<a style="text-decoration:none;color:black;" href="https://futureradio.net/stream.php">Login to see the song...</a>
 </div>
-    <a>Some content is owned by <a href="https://geicomo.com/geicomoterms.pdf">Geicomo.com</a>. All rights reserved. </a>
 </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('audioElement');

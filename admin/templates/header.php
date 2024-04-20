@@ -7,16 +7,16 @@
                 switch ($val)
         {
         case 1:
-                echo '<img width="135" height="60" src="http://futureradio.net/images/futureratheon.png"></img>';
+                echo '<img width="135" height="60" src="https://futureradio.net/images/futureratheon.png"></img>';
                 break;
         default:	
-                echo '<img id="logo" src="http://futureradio.net/images/radiofuture.png"></img>';
+                echo '<img id="logo" src="https://futureradio.net/images/futureradio.png"></img>';
                 break;
         }
 ?>
-	<p><a href="http://futureradio.net/index.php">Home</a></p><br>
-	<p><a href="http://futureradio.net/admin/home.php">Admin Home</a></p>
-	<p><a href="http://futureradio.net/admin/validate.php">User Info</a></p>
+	<p><a href="https://futureradio.net/index.php">Home</a></p><br>
+	<p><a href="https://futureradio.net/admin/home.php">Admin Home</a></p>
+	<p><a href="https://futureradio.net/admin/validate.php">User Info</a></p>
 </div>
 
 <div id="header">

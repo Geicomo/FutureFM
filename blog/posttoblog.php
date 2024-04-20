@@ -1,49 +1,32 @@
 <?php
 session_start();
 
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+header('Content-Type: text/plain');
 
-if ($username === 'Future' && $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["blog_title"]) && isset($_POST["blog_content"])) {
-    // Get the blog title and content from the POST data
-    $blogTitle = $_POST["blog_title"];
-    $blogContent = $_POST["blog_content"];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["blog_title"]) && isset($_POST["blog_content"])) {
+    // Sanitize and prepare the title and content
+    $blogTitle = htmlspecialchars($_POST["blog_title"], ENT_QUOTES, 'UTF-8');
+    $blogContent = htmlspecialchars($_POST["blog_content"], ENT_QUOTES, 'UTF-8');
 
     date_default_timezone_set('America/Boise');
-
-    // Sanitize and prepare the title and content
-    $blogTitle = htmlspecialchars($blogTitle, ENT_QUOTES, 'UTF-8');
-    $blogContent = htmlspecialchars($blogContent, ENT_QUOTES, 'UTF-8');
-
     $blogFilePath = 'blogs.txt';
+    $formattedBlogPost = "\n" . $blogTitle . "\n" . date('jS \of F, Y, g:ia') . "\n" . $blogContent . "\n";
 
-    // Create the new blog post with the current date
-    $formattedBlogPost = $blogTitle . "\n" . date('jS \of F, Y, g:ia') . "\n" . $blogContent . "\n\n";
+    // Using file locking to avoid concurrency issues
+    $file = fopen($blogFilePath, 'c+');
+    if (flock($file, LOCK_EX)) {  // acquire an exclusive lock
+        fseek($file, 0, SEEK_END);  // move to the end of the file
+        fwrite($file, $formattedBlogPost);  // write the new blog post
+        flock($file, LOCK_UN);    // release the lock
+    } else {
+        echo "Could not lock the file for writing.";
+        exit;
+    }
+    fclose($file);
 
-    // Read the existing content of the file
-    $existingContent = file_get_contents($blogFilePath);
-
-    // Create a temporary file
-    $tempFilePath = 'temp_blogs.txt';
-
-    // Open the temporary file for writing
-    $tempFile = fopen($tempFilePath, 'w');
-
-    // Write the new blog post to the temporary file
-    fwrite($tempFile, $formattedBlogPost);
-
-    // Write the existing content to the temporary file
-    fwrite($tempFile, $existingContent);
-
-    // Close the temporary file
-    fclose($tempFile);
-
-    // Replace the original file with the temporary file
-    rename($tempFilePath, $blogFilePath);
-
-    // Respond with a success message
     echo "Blog post added successfully!";
 } else {
-    // Respond with an error message or redirect to an error page
-    echo "Blog post not added. Please try again.";
+    echo "Blog post not added. Please ensure all fields are filled correctly.";
 }
 ?>
+

@@ -3,42 +3,48 @@
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 8</div>
+  <div class="numbertext">1 / 9</div>
   <img src="/images/mogmon.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 8</div>
+  <div class="numbertext">2 / 9</div>
   <img src="/images/traptues.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 8</div>
+  <div class="numbertext">3 / 9</div>
   <img src="/images/wastewend.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">4 / 8</div>
+  <div class="numbertext">4 / 9</div>
   <img src="/images/throwthurs.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">5 / 8</div>
+  <div class="numbertext">5 / 9</div>
   <img src="/images/futurefri.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">6 / 8</div>
+  <div class="numbertext">6 / 9</div>
   <img src="/images/stonersat.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">7 / 8</div>
+  <div class="numbertext">7 / 9</div>
   <img src="/images/lordsday.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">8 / 8</div>
+  <div class="numbertext">8 / 9</div>
+  <img src="/images/bobfm.jpg" style="width:100%">
+</div>
+
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 9</div>
   <img src="/images/futureallday.jpg" style="width:100%">
 </div>
 
@@ -58,6 +64,7 @@
   <span class="dot" onclick="currentSlide(6)"></span> 
   <span class="dot" onclick="currentSlide(7)"></span> 
   <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
 </div>
 </div>
 <script>

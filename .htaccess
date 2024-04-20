@@ -4,3 +4,6 @@ AuthType Basic
 AuthUserFile /var/www/html/stream/.htpasswd
 Require valid-user
 </Files>
+ErrorDocument 404 /404.php
+
+ErrorDocument 401 /401.php

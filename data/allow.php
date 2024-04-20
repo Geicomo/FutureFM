@@ -25,15 +25,27 @@ if (isset($_POST['userId'])) {
     // Update .htpasswd file
     $htpasswdPath = '/var/www/html/stream/.htpasswd';
     $htpasswdData = file_exists($htpasswdPath) ? file_get_contents($htpasswdPath) : '';
-    
-    // Assuming 'username' and 'HTpassword' are keys in the user data
-    $htpassword = $userData['HTpassword'];
+
+    $username = $userId; // Directly use $userId as the username based on your HTML snippet
+    $htpassword = $userData['HTpassword']; // Assuming this structure from your script
 
     // Append new user credentials
     $htpasswdData .= "$userId:$htpassword\n";
     file_put_contents($htpasswdPath, $htpasswdData);
 
-    echo 'User processed';
+    $subject = "FutureFM Registration";
+    $userEmail = $userData['email']; // Assuming this structure from your script
+
+    $message = "Hello $username. \nYour request to become a user of the FutureFM radio services has been approved. \n\nYou should now be able to go to our stream page at: https://futureradio.net/stream.php and enter your info to listen. Thank you and enjoy listening!";
+
+    // Use escapeshellarg to ensure that arguments are safely passed to the shell
+    $safeSubject = escapeshellarg($subject);
+    $safeMessage = escapeshellarg($message);
+    $safeEmail = escapeshellarg($userEmail);
+
+    $command = "echo $safeMessage | mail -s $safeSubject $safeEmail";
+
+    exec($command, $output, $returnVar);
 }
 ?>
 

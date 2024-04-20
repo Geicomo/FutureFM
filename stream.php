@@ -3,7 +3,6 @@
         <title>FutureRadio | 97.3FM</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
         <link rel="stylesheet" type="text/css" href="https://futureradio.net/templates/main.css">
-   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <?php include( 'templates/header.php' ); ?>
 </head>
 <body>
@@ -11,12 +10,11 @@
 <div id="info">
         <a>Below is the livestream of Future Radio 97.3.</a><br>
         <a style="font-size:13px"><i>Radio is delayed by about 5 seconds.</i></a><br><br>
-    <a>Current Listeners: <span id="userCount">0</span></h1>
 </div><br>
         <a style="font-weight:bold;">Live Stream Output:</a><br>
 <div style="margin-left:0px;"id="audioPlayer" class="custom-audio-player">
     <audio id="audioElement" autoplay>
-        <source src="https://160.2.162.241/stream" type="audio/mpeg">
+        <source src="https://futureradio.net/stream" type="audio/mpeg">
         <a id="error">Your browser does not support the audio element.</a>
     </audio>
     <button id="playPauseBtn">Play</button>
@@ -30,27 +28,6 @@
 
 
     <script>
-        function updateCount() {
-            // Update the displayed count
-            $.get('templates/server.php', function(data) {
-                $('#userCount').text(JSON.parse(data).count);
-            });
-        }
-
-        $(document).ready(function() {
-            // Increase count on page load
-            $.get('templates/server.php?action=increase', updateCount);
-
-            // Set interval to refresh the count every 5 seconds
-            setInterval(updateCount, 5000);
-
-            // Bind the unload event to decrease count
-            $(window).on('unload', function() {
-                // Use navigator.sendBeacon for reliable sending on unload
-                navigator.sendBeacon('templates/server.php?action=decrease');
-            });
-	});
-
 document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('audioElement');
     var playPauseBtn = document.getElementById('playPauseBtn');
@@ -134,8 +111,5 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('DOMContentLoaded', fetchCurrentSong);
 
 </script>
-<div style="position:fixed;bottom:0">
-    <a>All content is owned by <a href="https://geicomo.com/geicomoterms.pdf">Geicomo.com</a>. All rights reserved. </a>
-</div>
 </body>
 </html>
