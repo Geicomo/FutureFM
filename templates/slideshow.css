@@ -1,20 +1,17 @@
-.mySlides {display: none}
-
 .slideshow-holder {
-	margin-left: 89vh;
-	margin-top: -59vh;
-	margin-bottom: 5vh;
+        margin-left: 89vh;
+        margin-top: -59vh;
+        margin-bottom: 5vh;
         border: 2px solid;
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 5px 5px;
-
 }
 
 /* Slideshow container */
 .slideshow-container {
-	max-width: 100vh;
-  	position: relative;
+        max-width: 100vh;
+        position: relative;
 }
 
 /* Next & previous buttons */
@@ -88,9 +85,4 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
 }

@@ -1,7 +1,7 @@
-<html>
+<html lang="en">
 <head>
 	<title>FutureRadio | 97.3FM</title>
-        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="https://futureradio.net/templates/main.css">
 <?php include( 'templates/header.php' ); ?>
 </head>
@@ -35,7 +35,9 @@ echo '<h2>Blog Posts</h2>';
         }
     ?>
 </div>
+<div id="slideshow-whole">
 <?php include( 'templates/slideshow.php' ); ?>
+</div>
 <?php include( 'templates/bottominfo.php' ); ?>
 </body>
 </html>

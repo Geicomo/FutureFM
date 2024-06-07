@@ -10,14 +10,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["blog_title"]) && isset
 
     date_default_timezone_set('America/Boise');
     $blogFilePath = 'blogs.txt';
-    $formattedBlogPost = "\n" . $blogTitle . "\n" . date('jS \of F, Y, g:ia') . "\n" . $blogContent . "\n";
+    $formattedBlogPost = $blogTitle . "\n" . date('jS \of F, Y, g:ia') . "\n" . $blogContent . "\n" . "\n";
 
     // Using file locking to avoid concurrency issues
     $file = fopen($blogFilePath, 'c+');
     if (flock($file, LOCK_EX)) {  // acquire an exclusive lock
-        fseek($file, 0, SEEK_END);  // move to the end of the file
-        fwrite($file, $formattedBlogPost);  // write the new blog post
-        flock($file, LOCK_UN);    // release the lock
+        $existingContent = fread($file, filesize($blogFilePath));  // read existing content
+        fseek($file, 0);  // move to the start of the file
+        fwrite($file, $formattedBlogPost . $existingContent);  // prepend the new blog post
+        ftruncate($file, ftell($file));  // truncate the file to the current length
+        flock($file, LOCK_UN);  // release the lock
     } else {
         echo "Could not lock the file for writing.";
         exit;
