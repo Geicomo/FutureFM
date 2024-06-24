@@ -12,7 +12,7 @@ Welcome to the landing page of FutureFM where we play the past, present and <str
 </div>
 <br>
 <a href="https://futureradio.net/data/register.php">
-<button>Signup for Livestream</button>
+<button style="font-size: 13px;">Signup for Livestream</button>
 </a><br><br>
 <div style="max-height:55vh;overflow-y:scroll;" id="info">
 <?php	

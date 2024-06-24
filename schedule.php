@@ -16,7 +16,7 @@
 <a style="font-size:18px">Scheduling</a><br>
 <br>
 <div id="info">
-<p>Monday - Mogging Monday</p>
+<p>Monday - Motown Monday</p>
 <hr>
 <p>Tuesday - Trap Tuesday</p>
 <hr>
@@ -28,7 +28,7 @@
 <hr>
 <p>Saturday - Stoner Saturday</p>
 <hr>
-<p>Sunday - Lords Day</p>
+<p>Sunday - Shitpost Sunday</p>
 </div>
 
 <?php include( 'templates/bottominfo.php' ); ?>

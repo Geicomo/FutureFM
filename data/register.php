@@ -22,8 +22,8 @@
             	<label>Password</label><br>
 		<input type="password" name="password"><br><br>
 		<a style="font-size:14px;"href="https://futureradio.net/data/frgpasswd/frgpasswd.php">Forgot Password...</a><br>
-		<a href="https://futureradio.net/index.php"><button type="button">Back</button></a>
-		<button type="submit" name="submit">Register</button>
+		<a style="font-size:13px;" href="https://futureradio.net/index.php"><button type="button">Back</button></a>
+		<button style="font-size:13px;" type="submit" name="submit">Register</button>
 		<p class="success"><?php echo @$user->success ?></p>
         	<p class="error"><?php echo @$user->error ?></p>
 		<a style="font-size:12px;">By registering a account you accept the <a style="font-size:12px;" href="https://geicomo.com/geicomoterms.pdf">Terms & Conditions</a><a style="font-size:12px;"> of futureradio.net</a></a><br><br>

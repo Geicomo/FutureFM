@@ -17,6 +17,7 @@
 	<p><a href="https://futureradio.net/index.php">Home</a></p><br>
 	<p><a href="https://futureradio.net/admin/home.php">Admin Home</a></p>
 	<p><a href="https://futureradio.net/admin/validate.php">User Info</a></p>
+        <p><a href="https://futureradio.net/shop/shop.php">Shop(WIP)</a></p>
 </div>
 
 <div id="header">
